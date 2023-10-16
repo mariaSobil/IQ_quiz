@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+
+}
+html{
+    font-family: 'Merriweather';
+    font-size: 20px;
+    }
+    section{
+        min-height: 100vh;
+        width: 100%;
+        background-color:lightslategrey;
+        display:flex;
+        align-items:center;
+        justify-content: center;
+
+    }
+
+    .container{
+        background-color: lightsteelblue;
+        padding: 45px 50px 50px 50px;
+        width: 5000%px;
+        max-width: 1000px;
+        max-height:5000px;
+        border-radius: 10x;
+        color:black;
+        position:relative;
+        overflow: hidden;
+ }
+
+ .container.scoreBoard{
+    position: absolute;
+    top: 20px;
+    right: 20px;
+
+ }
+ form h1{
+    font-size: 1.4rem;
+    line-height: 2rem;
+    margin-bottom: 2rem;
+ }
+ form .option{
+    font-size: 1.2rem;
+    margin:10px 0 0 10px;
+    padding: 10px;
+    transition:.3s ease background-color;
+    border-radius: 4px;
+    width: 100%;
+    display:flex;
+    align-items: center;
+    justify-content:stretch;
+
+ }
+ form .option label{
+    width:100%;
+    margin-left:10px;
+    cursor: pointer;
+    justify-self: stretch;
+
+ }
+ form .option:hover{
+    background-color: lightslategrey;
+    
+ }
+ form .option input[type="radio"]:checked + label{
+    color:blue;
+ }
+ form button,
+ .container .result-overlay button{
+    width:100%;
+    margin-top:20px;
+    padding:10px;
+    font-size:1.3rem;
+    font-family: 'Merriweather';
+    justify-self: stretch;
+    border-color:none;
+    outline: none;
+    color:black;
+    cursor:pointer;
+    transition:.3s ease 
+}
+button :hover,
+.container .result-overlay button:hover{
+    background-color: antiquewhite;
+}
+form .option.correct{
+   background-color: chartreuse;
+}
+.finish-btn, .next-btn{
+   width: 50%;
+   display: inline-block;
+   }
+   .finish-btn{
+      border-right: 1px solid black;
+   }
+   .next-btn{
+      border-left: 1px solid black;
+   }
+   .container .result-overlay{
+      position:absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      background-color:darkgrey;
+      text-align: center;
+      display:flex;
+      align-items: center;
+      justify-content:center;
+      flex-direction: column;
+   }
+
+   .container.result-overlay .final-result{
+      font-size: 5rem;
+   }
+   .container .placeholder{
+      position:absolute;
+      top:0;
+      left:0;
+      height:100%;
+      width:100%;
+      background-image: url(./placeholder.png);
+      background-color:darkgray;
+      background-position: center;
+      background-size: 90%;
+      background-repeat: no-repeat;
+   }
